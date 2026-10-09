@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200">
+  <g transform="translate(60 120)">
+    <path class="hull" d="M0 -50 C14 -38 18 -15 16 20 L-16 20 C-18 -15 -14 -38 0 -50 Z"/>
+    <path class="hull" d="M-15 0 C-27 6 -32 22 -27 38 L-15 24 Z"/>
+    <path class="hull" d="M15 0 C27 6 32 22 27 38 L15 24 Z"/>
+    <path class="hull" d="M-8 20 H8 L6 27 H-6 Z"/>
+    <circle class="port" cx="0" cy="-22" r="6"/>
+    <circle class="port" cx="0" cy="-6" r="3.5"/>
+    <path class="flame" d="M-6 29 C-7 40 -2 46 0 56 C2 46 7 40 6 29 Z"/>
+  </g>
+  <path class="trail" d="M60 114 L60 8"/>
+</svg>

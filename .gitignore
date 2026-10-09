@@ -1,0 +1,8 @@
+# Original working files (kept locally, not published)
+mymisc.tex
+*.pdf
+
+# Local tooling
+.claude/
+.DS_Store
+__pycache__/

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 226">
+  <!-- Same beam width (60) in both panels. Left: Sun 77° high; right: Sun 30° high. -->
+  <text x="20" y="24" class="label">SUN HIGH (MIDSUMMER)</text>
+  <path class="sun" d="M99.2 190 L160.8 190 L193.1 50 L131.5 50 Z"/>
+  <path class="dim" d="M20 190 H270"/>
+  <path class="sun-edge" d="M99.2 190 H160.8"/>
+  <text x="172" y="182" class="dim-label">77°</text>
+  <text x="130" y="214" text-anchor="middle" class="dim-label">a small patch</text>
+
+  <text x="320" y="24" class="label">SUN LOW (MIDWINTER)</text>
+  <path class="sun" d="M330 190 L450 190 L588.6 110 L468.6 110 Z"/>
+  <path class="dim" d="M310 190 H600"/>
+  <path class="sun-edge" d="M330 190 H450"/>
+  <text x="462" y="182" class="dim-label">30°</text>
+  <text x="390" y="214" text-anchor="middle" class="dim-label">about twice the area</text>
+</svg>

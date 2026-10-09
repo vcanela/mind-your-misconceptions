@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mind your misconceptions</title>
+<meta name="description" content="Short physics questions that reveal the misconceptions we all carry, with explanations and classroom ideas for science teachers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,400;1,400&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<style>
+/* ---------- Colours (light, then dark) ---------- */
+:root{
+  --bg:#f7f6f2;--surface:#fff;--panel:#efede6;--text:#1f1e1c;--muted:#64625c;--faint:#8d8b84;--line:#e2dfd6;
+  --accent:#185fa5;--accent-soft:#e6f1fb;--good:#2e6b30;--good-soft:#e7f3e4;--bad:#9a4a0b;--bad-soft:#faeeda;
+  --water:#d4e9f7;--water-ink:#2f74a6;--fig-accent:#c03c78;--rocket:#8c6ad8;--flame:#e98a15;--sun:#f6c445;--sun-ink:#c98a00;--moon-lit:#f7e9a8;--moon-dark:#4a4843;
+  --serif:"IBM Plex Serif",Georgia,serif;--sans:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#191918;--surface:#222220;--panel:#2a2a27;--text:#ecebe6;--muted:#b0aea6;--faint:#86847d;--line:#3a3935;
+  --accent:#85b7eb;--accent-soft:#16304a;--good:#9fd49a;--good-soft:#1d3320;--bad:#fac775;--bad-soft:#3d2604;
+  --water:#1b3346;--water-ink:#8cc1e6;--fig-accent:#f08fba;--rocket:#a88ce8;--flame:#f0a040;--sun:#b98a2a;--sun-ink:#f2c45a;--moon-lit:#efe2a2;--moon-dark:#0e0e0d;
+}}
+:root[data-theme="dark"]{
+  --bg:#191918;--surface:#222220;--panel:#2a2a27;--text:#ecebe6;--muted:#b0aea6;--faint:#86847d;--line:#3a3935;
+  --accent:#85b7eb;--accent-soft:#16304a;--good:#9fd49a;--good-soft:#1d3320;--bad:#fac775;--bad-soft:#3d2604;
+  --water:#1b3346;--water-ink:#8cc1e6;--fig-accent:#f08fba;--rocket:#a88ce8;--flame:#f0a040;--sun:#b98a2a;--sun-ink:#f2c45a;--moon-lit:#efe2a2;--moon-dark:#0e0e0d;
+}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 var(--sans)}
+a{color:var(--accent);text-underline-offset:3px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.wrap.wide{max-width:1040px}
+
+.topbar{border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;height:52px}
+.brand{font-family:var(--serif);font-size:1.05rem;color:var(--text);text-decoration:none}
+
+/* ---------- Index ---------- */
+.masthead{padding:56px 0 8px}
+.masthead h1{font:400 clamp(2.3rem,7vw,3.6rem)/1.08 var(--serif);margin:0 0 18px;letter-spacing:-.01em}
+.lede{font-size:1.2rem;line-height:1.5;color:var(--muted);max-width:34em;margin:0}
+.about{margin-top:32px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:44em}
+.about summary{cursor:pointer;padding:14px 0;font-weight:500}
+.about .prose{padding-bottom:12px}
+.filters{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:36px 0 20px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:.85rem;padding:5px 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
+.chip:hover{border-color:var(--faint)}
+.chip[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.search{font:inherit;font-size:.9rem;padding:6px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--text);flex:1 1 180px;max-width:280px;min-width:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:16px;padding-bottom:64px}
+.card{display:flex;flex-direction:column;gap:8px;padding:20px 22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;color:inherit;text-decoration:none;transition:border-color .15s}
+.card:hover{border-color:var(--accent)}
+.card-num{font-family:var(--mono);font-size:.8rem;color:var(--faint)}
+.card h2{font:400 1.4rem/1.25 var(--serif);margin:0}
+.card p{margin:0;color:var(--muted);font-size:.95rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-meta{margin-top:auto;padding-top:8px;font-size:.8rem;color:var(--faint)}
+.empty{color:var(--muted)}
+
+/* ---------- Prose ---------- */
+.prose p{margin:0 0 1em}
+.prose ul{padding-left:1.25em;margin:0 0 1em}
+.prose li{margin:.4em 0}
+.prose h3{font-size:1rem;margin:1.5em 0 .5em}
+.prose figure{margin:1.5em 0}
+.prose figcaption{font-size:.85rem;color:var(--muted);margin-top:.6em}
+.math-display{overflow-x:auto;overflow-y:hidden;margin:1em 0}
+.prose table{border-collapse:collapse;margin:1em 0;font-size:.95rem}
+.prose th,.prose td{border-bottom:1px solid var(--line);padding:6px 18px 6px 0;text-align:left}
+.prose th{font-weight:600}
+
+/* ---------- Figures (inline SVG, coloured from the tokens above) ---------- */
+.fig{display:block;width:100%;height:auto}
+.fig text{font-family:var(--sans);font-size:14px;fill:var(--text)}
+.fig .var{font-family:var(--serif);font-style:italic}
+.fig .label{font-size:12px;font-weight:600;letter-spacing:.08em;fill:var(--muted)}
+.fig .water{fill:var(--water)}
+.fig .current{stroke:var(--water-ink);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.fig .current-label{fill:var(--water-ink)}
+.fig .route{stroke:var(--fig-accent);stroke-width:3;fill:none}
+.fig .route-head,.fig .dot{fill:var(--fig-accent)}
+.fig .swimmer{fill:var(--text)}
+.fig .dim{stroke:var(--muted);stroke-width:1.5;fill:none}
+.fig .dim-label,.fig .dim-label text{fill:var(--muted)}
+.fig .hull{fill:var(--rocket)}
+.fig .port{fill:var(--surface)}
+.fig .flame{fill:var(--flame)}
+.fig .vec{stroke:var(--text);stroke-width:3;fill:none}
+.fig .vec-head{fill:var(--text)}
+.fig .trail{stroke:var(--text);stroke-width:3.5;fill:none;stroke-linecap:round;stroke-dasharray:.1 8}
+.fig .wire{stroke:var(--text);stroke-width:2.5;fill:none;stroke-linecap:round}
+.fig .meter{fill:var(--surface);stroke:var(--text);stroke-width:2.5}
+.fig .meter-text{font-size:15px;font-weight:600}
+.fig .sun{fill:var(--sun);fill-opacity:.55}
+.fig .sun-edge{stroke:var(--sun-ink);stroke-width:4}
+.fig .box{fill:var(--surface);stroke:var(--text);stroke-width:2}
+.fig .pair{stroke:var(--fig-accent);stroke-width:3;fill:none}
+.fig .pair-head{fill:var(--fig-accent)}
+.fig .orbit{fill:none;stroke:var(--muted);stroke-width:1.5;stroke-dasharray:4 5}
+.fig .moon-dark{fill:var(--moon-dark);stroke:var(--muted);stroke-width:1}
+.fig .moon-lit{fill:var(--moon-lit)}
+.fig .earth-lit{fill:var(--water-ink)}
+.fig .ball{fill:var(--fig-accent)}
+
+/* ---------- Entry ---------- */
+.entry{padding:24px 0 64px}
+.crumbs a{font-size:.9rem;text-decoration:none}
+.kicker{font-family:var(--mono);font-size:.8rem;color:var(--faint);margin:28px 0 8px}
+.entry h1{font:400 clamp(2rem,6vw,2.7rem)/1.12 var(--serif);margin:0 0 24px}
+.question{font-size:1.06rem}
+
+.options{display:grid;gap:10px;margin:24px 0}
+.options.pictures{grid-template-columns:1fr 1fr}
+@media (max-width:520px){.options.pictures{grid-template-columns:1fr}}
+.pictures .fig{margin:0 auto}
+.option{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;align-items:start;padding:14px 16px;background:var(--surface);border:1.5px solid var(--line);border-radius:12px;cursor:pointer;transition:border-color .15s,background .15s}
+.option:hover{border-color:var(--faint)}
+.option:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.option[aria-checked="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.letter{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-family:var(--mono);font-size:.85rem;color:var(--muted);background:var(--surface)}
+.option[aria-checked="true"] .letter{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.opt-body{padding-top:1px}
+.opt-body figure{margin:0}
+.opt-feedback{grid-column:2;font-size:.95rem;border-top:1px solid var(--line);padding-top:10px}
+.pictures .opt-feedback{grid-column:1/-1}
+.opt-feedback p:last-child{margin-bottom:0}
+.opt-tag{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin:0 0 6px!important}
+.answered .option{cursor:default}
+.answered .option:hover{border-color:var(--line)}
+.answered .option.is-correct{border-color:var(--good);background:var(--good-soft)}
+.answered .option.is-correct .letter{background:var(--good);border-color:var(--good);color:var(--surface)}
+.answered .option.is-wrong{border-color:var(--bad);background:var(--bad-soft)}
+.answered .option.is-wrong .letter{background:var(--bad);border-color:var(--bad);color:var(--surface)}
+.is-correct .opt-tag{color:var(--good)}
+.is-wrong .opt-tag{color:var(--bad)}
+
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:8px 0 24px}
+.btn{font:inherit;font-weight:500;font-size:.95rem;padding:9px 18px;border-radius:8px;border:1.5px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer}
+.btn:hover{border-color:var(--faint)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.quiet{border-color:transparent;background:none;color:var(--muted);text-decoration:underline;text-underline-offset:3px;padding-left:4px}
+.verdict{font-size:1.05rem;margin:0 0 8px;outline:none}
+
+.misconception{margin:40px 0 8px;padding:24px 26px;border-radius:12px;background:var(--panel);border-left:4px solid var(--fig-accent)}
+.misconception .label{font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 8px}
+.misconception h2{font:400 1.65rem/1.25 var(--serif);margin:0 0 10px}
+.misconception p:last-child{margin:0;color:var(--muted)}
+.section h2{font:600 1.15rem/1.3 var(--sans);margin:44px 0 12px}
+.deeper{margin-top:44px;padding:4px 24px 8px;border:1.5px dashed var(--line);border-radius:12px}
+.deeper h2{margin-top:22px;margin-bottom:4px}
+.deeper .note{font-size:.85rem;color:var(--muted);margin:0 0 18px}
+.related{margin-top:32px}
+.credit{font-size:.85rem;color:var(--muted);margin-top:36px;border-top:1px solid var(--line);padding-top:16px}
+.after{margin-top:28px}
+
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:48px;border-top:1px solid var(--line);padding-top:18px}
+.pager a{text-decoration:none;display:flex;flex-direction:column;gap:2px;font-family:var(--serif);font-size:1.05rem}
+.pager small{font-family:var(--sans);font-size:.75rem;color:var(--faint)}
+.pager .next{text-align:right;margin-left:auto}
+
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--faint);font-size:.85rem}
+
+/* ---------- Print: before answering you get a question sheet, after it the full entry ---------- */
+@media print{
+  /* :not(#x) outranks the dark-mode rules, so prints are always light */
+  :root:not(#x){--bg:#fff;--surface:#fff;--panel:#f3f2ee;--text:#000;--muted:#444;--faint:#666;--line:#bbb;
+    --good:#2e6b30;--good-soft:#fff;--bad:#9a4a0b;--bad-soft:#fff;--accent:#185fa5;--accent-soft:#fff;
+    --water:#d4e9f7;--water-ink:#2f74a6;--fig-accent:#c03c78;--rocket:#8c6ad8;--flame:#e98a15;--sun:#f6c445;--sun-ink:#c98a00;--moon-lit:#f7e9a8;--moon-dark:#4a4843}
+  body{font-size:11pt}
+  .topbar,.crumbs,.actions,.pager,footer,#index-view{display:none!important}
+  .reveal{break-before:page}
+  .option,figure,.misconception{break-inside:avoid}
+  .option[aria-checked="true"]:not(.is-correct):not(.is-wrong){border-color:var(--line)}
+}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap wide"><a class="brand" href="#">Mind your misconceptions</a></div></header>
+
+<main>
+  <div id="index-view" hidden>
+    <div class="wrap wide">
+      <section class="masthead">
+        <h1>Mind your<br>misconceptions</h1>
+        <p class="lede">Short questions about everyday physics that catch out students, teachers and physicists alike. Commit to an answer before you read on.</p>
+        <details class="about">
+          <summary>About this collection</summary>
+          <div class="prose">
+            <p>Many of the ideas people bring to physics are not gaps in their knowledge but well-built intuitions that work most of the time. They grow out of everyday experience, everyday language reinforces them, and they survive teaching remarkably well: a student can learn the correct rule, pass a test on it, and still reason with the old idea when a question looks unfamiliar. Plenty of adults carry them too, science teachers included.</p>
+            <p>Being told the right answer rarely shifts these ideas. What works better is to bring the old idea into the open first: commit to a prediction, discover it was wrong, then work out why. Every entry here is built that way. It opens with a question, and only after you answer does it name the misconception, explain why it is tempting, and offer a better picture.</p>
+            <p>Each entry also suggests ways to tackle the idea in class and places to spot it in everyday life, and ends with a <em>Going deeper</em> section for specialists and for students looking for an extension.</p>
+            <p><strong>In class:</strong> show a question and have everyone commit to an answer, perhaps fingers up for a to d. Let pairs try to convince each other, vote again, then reveal. <strong>Printing:</strong> print an entry before answering for a question sheet, or after answering for the full entry.</p>
+          </div>
+        </details>
+      </section>
+      <div class="filters">
+        <div class="chips" id="topic-filter" role="group" aria-label="Topic"></div>
+        <div class="chips" id="level-filter" role="group" aria-label="Level"></div>
+        <input class="search" id="search" type="search" placeholder="Search questions" aria-label="Search questions">
+      </div>
+      <div class="cards" id="cards"></div>
+    </div>
+  </div>
+
+  <div id="entry-view" hidden><div class="wrap"></div></div>
+</main>
+
+<footer><div class="wrap wide">Mind your misconceptions, compiled by Victor Canela.</div></footer>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const ENTRIES = JSON.parse(document.getElementById('data').textContent).entries;
+const byId = Object.fromEntries(ENTRIES.map(e => [e.id, e]));
+const LEVEL_NAMES = { junior: 'Years 7 to 10', senior: 'Years 11 to 13' };
+const LETTERS = 'abcdefgh';
+const filters = { topic: 'all', level: 'all', query: '' };
+
+const indexView = document.getElementById('index-view');
+const entryView = document.getElementById('entry-view');
+const entryWrap = entryView.querySelector('.wrap');
+let indexScroll = 0;
+
+function escapeHtml(s) {
+  return s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
+function levelText(levels) {
+  return levels.length === 2 ? 'Years 7 to 13' : LEVEL_NAMES[levels[0]];
+}
+
+// KaTeX loads from a CDN; if it hasn't arrived, the maths simply shows as written.
+function renderMath(el) {
+  if (!window.renderMathInElement) return;
+  renderMathInElement(el, {
+    delimiters: [{ left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false }],
+    throwOnError: false
+  });
+}
+
+/* ---------- Routing: #entry-id shows an entry, anything else the index ---------- */
+function route() {
+  const entry = byId[decodeURIComponent(location.hash.slice(1))];
+  if (entry) {
+    if (!indexView.hidden) indexScroll = window.scrollY;
+    indexView.hidden = true;
+    entryView.hidden = false;
+    renderEntry(entry);
+    document.title = entry.title + ' · Mind your misconceptions';
+    window.scrollTo(0, 0);
+  } else {
+    entryView.hidden = true;
+    indexView.hidden = false;
+    document.title = 'Mind your misconceptions';
+    window.scrollTo(0, indexScroll);
+  }
+}
+
+/* ---------- Index ---------- */
+function setUpFilters() {
+  const topics = [...new Set(ENTRIES.map(e => e.topic))];
+  makeChips('topic-filter', 'topic', [['all', 'All topics'], ...topics.map(t => [t, t])]);
+  makeChips('level-filter', 'level', [['all', 'All levels'], ['junior', LEVEL_NAMES.junior], ['senior', LEVEL_NAMES.senior]]);
+  document.getElementById('search').addEventListener('input', e => {
+    filters.query = e.target.value.trim().toLowerCase();
+    renderCards();
+  });
+}
+
+function makeChips(boxId, key, items) {
+  const box = document.getElementById(boxId);
+  box.innerHTML = items.map(([value, label]) =>
+    `<button type="button" class="chip" data-value="${escapeHtml(value)}" aria-pressed="${filters[key] === value}">${escapeHtml(label)}</button>`
+  ).join('');
+  box.addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    filters[key] = chip.dataset.value;
+    box.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', c === chip));
+    renderCards();
+  });
+}
+
+function renderCards() {
+  const cards = document.getElementById('cards');
+  const shown = ENTRIES.filter(e =>
+    (filters.topic === 'all' || e.topic === filters.topic) &&
+    (filters.level === 'all' || e.levels.includes(filters.level)) &&
+    (!filters.query || e.search.includes(filters.query)));
+  cards.innerHTML = shown.map(e => `
+    <a class="card" href="#${e.id}">
+      <span class="card-num">${String(e.number).padStart(2, '0')}</span>
+      <h2>${escapeHtml(e.title)}</h2>
+      <p>${e.teaser}</p>
+      <span class="card-meta">${escapeHtml(e.topic)} · ${levelText(e.levels)}</span>
+    </a>`).join('') || '<p class="empty">No questions match.</p>';
+  renderMath(cards);
+}
+
+/* ---------- Entry ---------- */
+function renderEntry(e) {
+  const i = ENTRIES.indexOf(e);
+  const prev = ENTRIES[i - 1], next = ENTRIES[i + 1];
+
+  const options = e.options.map((o, k) => `
+    <div class="option" role="radio" tabindex="0" aria-checked="false" data-k="${k}">
+      <span class="letter">${LETTERS[k]}</span>
+      <div class="opt-body">${o.html}</div>
+      <div class="opt-feedback prose" hidden>${o.feedback}</div>
+    </div>`).join('');
+
+  const sections = e.sections.map(s => s.heading === 'Going deeper'
+    ? `<section class="section deeper prose"><h2>${s.heading}</h2><p class="note">For specialists, and for students looking for an extension.</p>${s.html}</section>`
+    : `<section class="section prose"><h2>${s.heading}</h2>${s.html}</section>`).join('');
+
+  const related = e.related.length
+    ? `<p class="related">Related: ${e.related.map(r => `<a href="#${r.id}">${escapeHtml(r.title)}</a>`).join(', ')}</p>` : '';
+
+  entryWrap.innerHTML = `
+    <article class="entry">
+      <nav class="crumbs"><a href="#">← All questions</a></nav>
+      <p class="kicker">Question ${e.number} · ${escapeHtml(e.topic)} · ${levelText(e.levels)}</p>
+      <h1>${escapeHtml(e.title)}</h1>
+      <div class="prose question">${e.question}</div>
+      <div class="options${e.pictureOptions ? ' pictures' : ''}" role="radiogroup" aria-label="Answers">${options}</div>
+      <div class="actions">
+        <button type="button" class="btn primary" id="check" disabled>Check my answer</button>
+        <button type="button" class="btn quiet" id="skip">Skip to the answer</button>
+      </div>
+      <p class="verdict" tabindex="-1" hidden></p>
+      <div class="reveal" hidden>
+        <div class="misconception">
+          <p class="label">The misconception</p>
+          <h2>${e.misconception}</h2>
+          <p>${e.tagline}</p>
+        </div>
+        ${sections}
+        ${related}
+        ${e.credit ? `<p class="credit">${e.credit}</p>` : ''}
+        <div class="actions after">
+          <button type="button" class="btn" id="again">Try it again</button>
+          <button type="button" class="btn" id="print">Print this entry</button>
+        </div>
+      </div>
+      <nav class="pager">
+        ${prev ? `<a href="#${prev.id}"><small>← Previous</small>${escapeHtml(prev.title)}</a>` : ''}
+        ${next ? `<a class="next" href="#${next.id}"><small>Next →</small>${escapeHtml(next.title)}</a>` : ''}
+      </nav>
+    </article>`;
+
+  const group = entryWrap.querySelector('.options');
+  const optionEls = [...group.querySelectorAll('.option')];
+  const checkBtn = entryWrap.querySelector('#check');
+  const correct = e.options.findIndex(o => o.correct);
+  let chosen = null;
+
+  function choose(k) {
+    if (group.classList.contains('answered')) return;
+    chosen = k;
+    optionEls.forEach((el, j) => el.setAttribute('aria-checked', j === k));
+    checkBtn.disabled = false;
+  }
+
+  function reveal() {
+    group.classList.add('answered');
+    optionEls.forEach((el, k) => {
+      el.tabIndex = -1;
+      const isCorrect = k === correct, isChosen = k === chosen;
+      el.classList.toggle('is-correct', isCorrect);
+      el.classList.toggle('is-wrong', isChosen && !isCorrect);
+      // Feedback only for the chosen option, or for the answer if the reader skipped.
+      if (isChosen || (chosen === null && isCorrect)) {
+        const tag = isChosen ? (isCorrect ? 'Your answer · correct' : 'Your answer') : 'The answer';
+        const feedback = el.querySelector('.opt-feedback');
+        feedback.insertAdjacentHTML('afterbegin', `<p class="opt-tag">${tag}</p>`);
+        feedback.hidden = false;
+      }
+    });
+    const verdict = entryWrap.querySelector('.verdict');
+    verdict.textContent = chosen === null
+      ? `The answer is ${LETTERS[correct]}.`
+      : chosen === correct
+        ? `You chose ${LETTERS[chosen]}. That's right.`
+        : `You chose ${LETTERS[chosen]}. The answer is ${LETTERS[correct]}.`;
+    verdict.hidden = false;
+    entryWrap.querySelector('.actions').hidden = true;
+    entryWrap.querySelector('.reveal').hidden = false;
+    verdict.focus({ preventScroll: true });
+  }
+
+  optionEls.forEach((el, k) => {
+    el.addEventListener('click', () => choose(k));
+    el.addEventListener('keydown', ev => {
+      if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); choose(k); }
+    });
+  });
+  checkBtn.addEventListener('click', reveal);
+  entryWrap.querySelector('#skip').addEventListener('click', reveal);
+  entryWrap.querySelector('#again').addEventListener('click', () => { renderEntry(e); window.scrollTo(0, 0); });
+  entryWrap.querySelector('#print').addEventListener('click', () => window.print());
+  renderMath(entryWrap);
+}
+
+window.addEventListener('hashchange', route);
+// Wait for DOMContentLoaded so the deferred KaTeX scripts have run.
+document.addEventListener('DOMContentLoaded', () => {
+  setUpFilters();
+  renderCards();
+  route();
+});
+</script>
+</body>
+</html>

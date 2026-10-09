@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 240">
+  <path class="wire" d="M60 112 V50 H360 V104"/>
+  <path class="wire" d="M360 136 V190 H60 V124"/>
+  <!-- Cell: long plate positive, short plate negative -->
+  <path class="wire" d="M40 112 H80"/>
+  <path class="wire" stroke-width="6" d="M50 124 H70"/>
+  <text x="32" y="116" text-anchor="end">+</text>
+  <text x="32" y="133" text-anchor="end">−</text>
+  <!-- Bulb -->
+  <circle class="meter" cx="360" cy="120" r="16"/>
+  <path class="wire" d="M348.7 108.7 L371.3 131.3 M371.3 108.7 L348.7 131.3"/>
+  <text x="386" y="125">bulb</text>
+  <!-- Ammeters -->
+  <circle class="meter" cx="210" cy="50" r="17"/>
+  <text x="210" y="55.5" text-anchor="middle" class="meter-text">A</text>
+  <text x="210" y="22" text-anchor="middle">ammeter 1 reads 0.20 A</text>
+  <circle class="meter" cx="210" cy="190" r="17"/>
+  <text x="210" y="195.5" text-anchor="middle" class="meter-text">A</text>
+  <text x="210" y="230" text-anchor="middle">ammeter 2 reads ?</text>
+</svg>

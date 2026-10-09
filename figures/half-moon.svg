@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 392">
+  <!-- Seen from above the North Pole: Sun to the left, Moon moves anticlockwise. Lit halves face the Sun. -->
+  <text x="20" y="104" class="dim-label">sunlight</text>
+  <path class="vec" d="M20 120 H70" stroke-width="2"/><path class="vec-head" d="M68 114 L82 120 L68 126 Z"/>
+  <path class="vec" d="M20 280 H70" stroke-width="2"/><path class="vec-head" d="M68 274 L82 280 L68 286 Z"/>
+  <circle class="orbit" cx="330" cy="200" r="125"/>
+  <circle class="moon-dark" cx="330" cy="200" r="22"/>
+  <path class="earth-lit" d="M330 178 A22 22 0 0 0 330 222 Z"/>
+  <text x="330" y="242" text-anchor="middle">Earth</text>
+  <circle class="moon-dark" cx="205.0" cy="200.0" r="14"/>
+  <path class="moon-lit" d="M205.0 186.0 A14 14 0 0 0 205.0 214.0 Z"/>
+  <text x="171.0" y="205.0" text-anchor="end" class="dim-label">new Moon</text>
+  <circle class="moon-dark" cx="241.6" cy="288.4" r="14"/>
+  <path class="moon-lit" d="M241.6 274.4 A14 14 0 0 0 241.6 302.4 Z"/>
+  <text x="217.6" y="317.4" text-anchor="end" class="dim-label">waxing crescent</text>
+  <circle class="moon-dark" cx="330.0" cy="325.0" r="14"/>
+  <path class="moon-lit" d="M330.0 311.0 A14 14 0 0 0 330.0 339.0 Z"/>
+  <text x="330.0" y="372.0" text-anchor="middle" class="dim-label">first quarter</text>
+  <circle class="moon-dark" cx="418.4" cy="288.4" r="14"/>
+  <path class="moon-lit" d="M418.4 274.4 A14 14 0 0 0 418.4 302.4 Z"/>
+  <text x="442.4" y="317.4" text-anchor="start" class="dim-label">waxing gibbous</text>
+  <circle class="moon-dark" cx="455.0" cy="200.0" r="14"/>
+  <path class="moon-lit" d="M455.0 186.0 A14 14 0 0 0 455.0 214.0 Z"/>
+  <text x="489.0" y="205.0" text-anchor="start" class="dim-label">full Moon</text>
+  <circle class="moon-dark" cx="418.4" cy="111.6" r="14"/>
+  <path class="moon-lit" d="M418.4 97.6 A14 14 0 0 0 418.4 125.6 Z"/>
+  <text x="442.4" y="92.6" text-anchor="start" class="dim-label">waning gibbous</text>
+  <circle class="moon-dark" cx="330.0" cy="75.0" r="14"/>
+  <path class="moon-lit" d="M330.0 61.0 A14 14 0 0 0 330.0 89.0 Z"/>
+  <text x="330.0" y="42.0" text-anchor="middle" class="dim-label">last quarter</text>
+  <circle class="moon-dark" cx="241.6" cy="111.6" r="14"/>
+  <path class="moon-lit" d="M241.6 97.6 A14 14 0 0 0 241.6 125.6 Z"/>
+  <text x="217.6" y="92.6" text-anchor="end" class="dim-label">waning crescent</text>
+  <path class="vec-head" d="M216.7 253.3 L205.9 242.6 L217.0 238.1 Z"/>
+</svg>

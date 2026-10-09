@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 140">
+  <!-- Forces on the cart -->
+  <text x="20" y="22" class="label">FORCES ON THE CART</text>
+  <rect class="box" x="120" y="70" width="80" height="44" rx="6"/>
+  <text x="160" y="97" text-anchor="middle">cart</text>
+  <path class="pair" d="M200 92 H274"/>
+  <path class="pair-head" d="M272 85 L288 92 L272 99 Z"/>
+  <text x="244" y="62" text-anchor="middle">pull of horse, <tspan class="var">P</tspan></text>
+  <path class="vec" d="M120 92 H86"/>
+  <path class="vec-head" d="M88 85 L72 92 L88 99 Z"/>
+  <text x="96" y="62" text-anchor="middle">friction</text>
+
+  <!-- Forces on the horse -->
+  <text x="320" y="22" class="label">FORCES ON THE HORSE</text>
+  <rect class="box" x="420" y="70" width="80" height="44" rx="6"/>
+  <text x="460" y="97" text-anchor="middle">horse</text>
+  <path class="pair" d="M420 92 H346"/>
+  <path class="pair-head" d="M348 85 L332 92 L348 99 Z"/>
+  <text x="376" y="62" text-anchor="middle">pull of cart, <tspan class="var">P</tspan></text>
+  <path class="vec" d="M500 92 H584"/>
+  <path class="vec-head" d="M582 85 L598 92 L582 99 Z"/>
+  <text x="549" y="62" text-anchor="middle">push of ground</text>
+</svg>

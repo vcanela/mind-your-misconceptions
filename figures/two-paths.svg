@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220">
+  <!-- 10 V cell on the left; 10 ohm and 1000 ohm resistors in parallel -->
+  <path class="wire" d="M60 104 V40 H310 V85"/>
+  <path class="wire" d="M310 135 V180 H60 V116"/>
+  <path class="wire" d="M190 40 V85 M190 135 V180"/>
+  <path class="wire" d="M40 104 H80"/>
+  <path class="wire" stroke-width="6" d="M50 116 H70"/>
+  <text x="32" y="115" text-anchor="end">10 V</text>
+  <rect class="box" x="175" y="85" width="30" height="50" rx="3"/>
+  <text x="215" y="115">10 Ω</text>
+  <rect class="box" x="295" y="85" width="30" height="50" rx="3"/>
+  <text x="335" y="115">1000 Ω</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 336">
+  <!-- River -->
+  <text x="20" y="22" class="label">RIVER</text>
+  <rect x="20" y="34" width="600" height="84" rx="6" class="water"/>
+  <g class="current">
+    <path d="M210 76 H130 M140 70 L130 76 L140 82"/>
+    <path d="M530 76 H450 M460 70 L450 76 L460 82"/>
+  </g>
+  <text x="330" y="81" text-anchor="middle" class="current-label">current, speed <tspan class="var">c</tspan></text>
+  <path class="route" d="M78 54 H566 A22 22 0 0 1 566 98 H78"/>
+  <path class="route-head" d="M316 47 L330 54 L316 61 Z"/>
+  <path class="route-head" d="M344 91 L330 98 L344 105 Z"/>
+  <circle cx="66" cy="54" r="7" class="swimmer"/>
+  <path class="dim" d="M78 134 H588 M78 128 V140 M588 128 V140"/>
+  <text x="333" y="156" text-anchor="middle" class="dim-label"><tspan class="var">L</tspan>/2 upstream, then <tspan class="var">L</tspan>/2 back down</text>
+
+  <!-- Pool -->
+  <text x="20" y="192" class="label">SWIMMING POOL</text>
+  <rect x="20" y="204" width="600" height="84" rx="6" class="water"/>
+  <text x="330" y="251" text-anchor="middle" class="current-label">still water</text>
+  <path class="route" d="M78 224 H566 A22 22 0 0 1 566 268 H78"/>
+  <path class="route-head" d="M316 217 L330 224 L316 231 Z"/>
+  <path class="route-head" d="M344 261 L330 268 L344 275 Z"/>
+  <circle cx="66" cy="224" r="7" class="swimmer"/>
+  <path class="dim" d="M78 304 H588 M78 298 V310 M588 298 V310"/>
+  <text x="333" y="326" text-anchor="middle" class="dim-label"><tspan class="var">L</tspan>/2 out, then <tspan class="var">L</tspan>/2 back</text>
+</svg>

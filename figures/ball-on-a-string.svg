@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 205">
+  <circle class="orbit" cx="100" cy="115" r="60"/>
+  <circle class="swimmer" cx="100" cy="115" r="4"/>
+  <path class="wire" d="M100 115 V62"/>
+  <circle class="ball" cx="100" cy="55" r="7"/>
+  <path class="vec" d="M88 55 H48"/><path class="vec-head" d="M50 49 L36 55 L50 61 Z"/>
+  <text x="62" y="41" text-anchor="middle" class="dim-label">moving</text>
+  <text x="100" y="197" text-anchor="middle" class="dim-label">seen from above</text>
+</svg>

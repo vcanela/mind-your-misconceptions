@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle class="orbit" cx="100" cy="115" r="60"/>
+  <circle class="swimmer" cx="100" cy="115" r="4"/>
+  <circle class="ball" cx="100" cy="55" r="7"/>
+  <path class="trail" d="M91 55 Q38 53 12 95"/>
+</svg>
